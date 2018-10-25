@@ -1,0 +1,9 @@
+*.*
+
+!.gitignore
+
+!aaai14.csv
+!*.md
+
+!*.py
+!*.bat
