@@ -1,0 +1,109 @@
+\usepackage[scheme=plain]{ctex}
+% \usepackage{xeCJK}
+% \usepackage{fontspec}
+
+% \usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{enumitem}
+\setlist{
+    leftmargin=*,
+    itemsep=0pt,
+    nolistsep,
+}
+
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{caption}
+% \setlength{\extrarowheight}{10pt}
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    left=1cm,
+    right=1cm,
+    top=2cm,
+    bottom=2cm,
+}
+
+% \usepackage[bookmarksnumbered, bookmarksopen, colorlinks, citecolor=blue, linkcolor=blue]{hyperref}
+
+\newcommand{\fs}[1]{\fontsize{#1 pt}{0pt}\selectfont}
+
+\setlength\parindent{0pt}
+\setlength{\parskip}{1ex}
+
+\usepackage{titlesec}
+\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing\subsubsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+
+\usepackage{xcolor}
+\usepackage{listings}
+\lstdefinelanguage{tikz}{
+basicstyle={\color{blue} \ttfamily},
+breaklines = true,
+breakatwhitespace=true,
+keepspaces = true,
+% showspaces=true,
+% escapechar=`,
+% mathescape=true,
+}
+
+\newcommand{\ltz}[1]{\lstinline[language=tikz]{#1}}
+
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+
+\newfontfamily\ttconsolas{Consolas}
+
+\lstdefinestyle{myPython}{language=Python,
+    basicstyle=\footnotesize \ttconsolas,        % set font type and size
+    breaklines=true,
+    keywordstyle=\color{blue},
+    % morekeywords={matlab2tikz},
+    % morekeywords=[2]{1}, 
+    % keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},
+    stringstyle=\color{mylilas},
+    % stringstyle=\color{purple},
+    frame=single,
+    framexleftmargin=0em,
+    % aboveskip=-\baselineskip,
+    commentstyle=\color{mygreen},
+    showstringspaces=false,% without this there will be a symbol in the places where there is a space
+    numbers=left,
+    numberstyle={\tiny \color{black}}, % size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    tabsize=4,                     % sets default tabsize to 4 spaces
+    emph=[1]{tokenizeText, PorterStemmer, WordNetLemmatizer, lemmatizeTerm, lemmatizeText, getAllTerm, calcTF, calcDF, calcTFIDF, calcKLD, calcAKLD, chooseInitDoc, updateGroups, outputGroups},
+    emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, 
+    % emphstyle=[2]{style}, 
+    escapeinside=``,               % Characters escape: To Use Chinese in codes
+}
+
+\lstdefinestyle{plainText}{language={},
+    basicstyle=\footnotesize \ttconsolas,        % set font type and size
+    breaklines=true,
+    keywordstyle=\color{blue},
+    % morekeywords={matlab2tikz},
+    % morekeywords=[2]{1}, 
+    % keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},
+    stringstyle=\color{mylilas},
+    % stringstyle=\color{purple},
+    frame=single,
+    framexleftmargin=0em,
+    % aboveskip=-\baselineskip,
+    commentstyle=\color{mygreen},
+    showstringspaces=false,% without this there will be a symbol in the places where there is a space
+    numbers=none,
+    numberstyle={\tiny \color{black}}, % size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    tabsize=4,                     % sets default tabsize to 4 spaces
+    emph=[1]{tokenizeText, PorterStemmer, WordNetLemmatizer, lemmatizeTerm, lemmatizeText, getAllTerm, calcTF},
+    emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, 
+    % emphstyle=[2]{style}, 
+    escapeinside=``,               % Characters escape: To Use Chinese in codes   
+}
